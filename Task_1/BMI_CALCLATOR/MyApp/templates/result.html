@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .card {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            color: rgb(94, 174, 48);
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+
+        img {
+            max-width: 50%;
+            height: 50%;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .Intro{
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: left;
+          h2{
+          color: black;
+          }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="{% static 'Images/BMI.jpg' %}" alt="BMI Result Image">
+
+        <h2> Your BMI Result</h2>
+        <p> <strong>Your BMI is: </strong> {{ bmi }}</p>
+        <p> <strong> Interpretation: </strong>{{ interpretation }}</p>
+        <!-- Add an image source URL or local path below -->
+         </div>
+    <div>
+        <div class="Intro">
+        <h2>BMI Introduction</h2>
+        <p>
+            BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator.
+        </p>
+
+        <h2>BMI table for adults</h2>
+        <p>
+            This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 20 or older.
+        </p>
+        <img src="{% static 'Images/Table1.png' %}" alt="BMI Chart Image">
+
+        <h2>BMI table for children and teens, age 2-20</h2>
+        <p>
+            The Centers for Disease Control and Prevention (CDC) recommends BMI categorization for children and teens between age 2 and 20.        </p>
+        <img src="{% static 'Images/Table2.png' %}" alt="BMI Chart Image">
+
+        <h2>Risks associated with being overweight</h2>
+        <p>
+            Being overweight increases the risk of a number of serious diseases and health conditions. Below is a list of said risks, according to the Centers for Disease Control and Prevention (CDC):
+        </p>
+        <p>* High blood pressure</p>
+        <p>* Higher levels of LDL cholesterol, which is widely considered "bad cholesterol," lower levels of HDL cholesterol, considered to be good cholesterol in moderation, and high levels of triglycerides</p>
+        <p>* Type II diabetes</p>
+        <p>* Coronary heart disease</p>
+        <p>* Stroke</p>
+        <p>As can be seen from the list above, there are numerous negative, in some cases fatal, outcomes that may result from being overweight. Generally, a person should try to maintain a BMI below 25 kg/m2, but ideally should consult their doctor to determine whether or not they need to make any changes to their lifestyle in order to be healthier.</p>
+
+        <h2>Risks associated with being underweight</h2>
+        <p>Being underweight has its own associated risks, listed below:</p>
+        <p>* Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)</p>
+        <p>* Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone</p>
+        <p>* A decrease in immune function</p>
+        <p>* Growth and development issues, particularly in children and teenagers</p>
+        <p>* Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. Underweight women also have a higher chance of miscarriage in the first trimester</p>
+
+        <h2>BMI formula</h2>
+        <p>Below are the equations used for calculating BMI in the International System of Units (SI) and the US customary system (USC) using a 5'10", 160-pound individual as an example:</p>
+        <img src="{% static 'Images/Formula.png' %}" alt="BMI Chart Image">
+    </div>
+
+    </div>
+</body>
+</html>
